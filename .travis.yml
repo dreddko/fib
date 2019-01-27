@@ -20,3 +20,15 @@ after_success:
   - docker push dreddko/fib-nginx
   - docker push dreddko/fib-server
   - docker push dreddko/fib-worker
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: fib
+  env: fib-env
+  bucket_name: elasticbeanstalk-us-east-1-448792431322
+  bucker_path: fib
+  on:
+    bransh: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
