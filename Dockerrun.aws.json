@@ -24,7 +24,7 @@
     },
     {
       "name": "nginx",
-      "iamge": "dreddko/fib-nginx",
+      "image": "dreddko/fib-nginx",
       "essential": true,
       "portMappings": [
         {
